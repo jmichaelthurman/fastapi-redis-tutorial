@@ -23,6 +23,6 @@ jobs:
         uses: docker/build-push-action@v6
         with:
           push: true
-          tags: fastapi-redis-tut:${{ github.sha }}
+          tags: ${{ secrets.DOCKER_USER }}/fastapi-redis-tut:${{ github.sha }}
 
 
