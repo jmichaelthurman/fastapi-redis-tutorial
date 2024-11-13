@@ -15,4 +15,7 @@ jobs:
     steps:
     - uses: actions/checkout@v4
     - name: Build the Docker image
-      run: docker build . --file Dockerfile --tag fast-api:$(date +%s)
+      run: docker build . --file Dockerfile --tag fastapi-redis-tut:$(date +%s) &&
+          // echo $DOCKER_PASSWORD | docker login --username $DOCKER_USER --password-stdin &&
+          // docker push fastapi-redis-tut:$(date +%s)
+
